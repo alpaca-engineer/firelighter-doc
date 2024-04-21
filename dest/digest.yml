@@ -1,0 +1,75 @@
+compilelog:
+  # 実行日:
+  # GitのHashとか:
+  # GitのHashの更新日とか:
+  # GitのHashの更新者とか:
+  # Gitのブランチとか: 
+
+requirementRoot:
+  requirements:
+  - title: 将棋オンライン概要
+    reason: 
+    description: |
+      将棋オンラインの概要は以下の通り。
+      ・プレイヤはリストからゲームに「参加」または「退出」できる。
+      ・ゲームは2人のプレイヤが参加するまで「待機」状態になる。
+      ・ゲーム開始後、将棋のルールに基づき、ユーザーが対局できるようにする。
+      ・ゲーム終了時には自動的に勝者を決定し、結果画面に表示する。
+      以下、将棋オンラインゲームの画面遷移。矢印の方向でのみ遷移する。
+    images:
+      - screen_flows.png
+    requirements:
+    - title: 待合室画面
+      reason: 
+      description: "待合室画面のイメージ"
+      images:
+        - waiting_room.png
+      specifications:
+        - id: 01
+          description: "対局を開始するためのユーザリストが表示される。"
+        - id: 02
+          description: "プレイヤは「Join」ボタンをクリックすることでゲームに参加することができる。"
+        - id: 03
+          description: "ゲームは2人のプレイヤが参加するまで「Waiting」状態になる。"
+        - id: 04
+          description: "ゲームは2人のプレイヤが参加したら、ゲーム画面に遷移する。"
+    - title: ゲーム画面
+      reason: 
+      description: "ゲーム画面のイメージ"
+      images:
+        - gaming.png
+      specifications:
+        - id: 01
+          description: "3x3の将棋ボードが表示される。"
+        - id: 02
+          description: "プレイヤーは自分の手番になった時、駒を動かすことができる。"
+        - id: 03
+          description: "現在の手番のプレイヤーがハイライトされる。"
+        - id: 04
+          description: "駒の移動は将棋のルールに従って有効な手のみを許可する。"
+        - id: 05
+          description: "ゲームの進行状況（例: 手数、取られた駒など）が表示される。"
+        - id: 06
+          description: "ゲームが終了した場合、自動的に結果画面に遷移する。"
+    - title: ゲーム結果画面
+      reason: 
+      description: "ゲーム結果画面のイメージ"
+      images:
+        - game_result.png
+      specifications:
+        - id: 01
+          description: "勝者の名前が表示される。"
+        - id: 02
+          description: "「戻る」ボタンをクリックするとユーザーリスト画面に戻ることができる。"
+        - id: 03
+          description: "対局の結果がデータベースに記録される。"
+
+glossary:
+  title: "9マス将棋オンライン 用語集"
+  categories:
+    - category: "一般"
+      terms:
+        - term: "駒"
+          description: "xxx"
+        - term: "待合室"
+          description: "xxx"
