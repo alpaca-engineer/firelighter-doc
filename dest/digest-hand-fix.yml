@@ -1,5 +1,13 @@
+project:
+  name: firelighter
+  url: https://github.com/alpaca-engineer/firelighter
+  pageTitle: firelighter Requirements
+
 compilelog:
   # 実行日:
+  generated: "2024-05-05 17:13:00"
+  git:
+    commit: b6bd7a9d67d766c32a81ea77b9df56edd5dc9593
   # GitのHashとか:
   # GitのHashの更新日とか:
   # GitのHashの更新者とか:
@@ -93,4 +101,17 @@ glossary:
         - term: "駒"
           description: "xxx"
         - term: "待合室"
+          description: "xxx"
+    - category: "構成要素- 概念"
+      images: ["firelighter_ui_component.png"]
+      terms:
+        - term: "Game"
+          description: "xxx"
+        - term: "Board"
+          description: "xxx"
+        - term: "Square"
+          description: "xxx"
+        - term: "Piece"
+          description: "xxx"
+        - term: "Stand"
           description: "xxx"
