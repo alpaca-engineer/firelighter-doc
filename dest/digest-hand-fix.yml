@@ -1,0 +1,96 @@
+compilelog:
+  # 実行日:
+  # GitのHashとか:
+  # GitのHashの更新日とか:
+  # GitのHashの更新者とか:
+  # Gitのブランチとか: 
+
+requirementRoot:
+  requirements:
+  - id: SG01
+    localId: SG01
+    title: 将棋オンライン概要
+    reason: 
+    description: |
+      将棋オンラインの概要は以下の通り。
+      ・プレイヤはリストからゲームに「参加」または「退出」できる。
+      ・ゲームは2人のプレイヤが参加するまで「待機」状態になる。
+      ・ゲーム開始後、将棋のルールに基づき、ユーザーが対局できるようにする。
+      ・ゲーム終了時には自動的に勝者を決定し、結果画面に表示する。
+      以下、将棋オンラインゲームの画面遷移。矢印の方向でのみ遷移する。
+    images:
+      - screen_flows.png
+    requirements:
+    - id: SG01-01
+      localId: "01"
+      title: 待合室画面
+      reason: 
+      description: "待合室画面のイメージ"
+      images:
+        - waiting_room.png
+      specifications:
+        - id: SG01-01-sp01
+          localId: "01"
+          description: "対局を開始するためのユーザリストが表示される。"
+        - id: SG01-01-sp02
+          localId: "02"
+          description: "プレイヤは「Join」ボタンをクリックすることでゲームに参加することができる。"
+        - id: SG01-01-sp03
+          localId: "03"
+          description: "ゲームは2人のプレイヤが参加するまで「Waiting」状態になる。"
+        - id: SG01-01-sp04
+          localId: "04"
+          description: "ゲームは2人のプレイヤが参加したら、ゲーム画面に遷移する。"
+    - id: SG01-02
+      localId: "02"
+      title: ゲーム画面
+      reason: 
+      description: "ゲーム画面のイメージ"
+      images:
+        - gaming.png
+      specifications:
+        - id: SG01-02-sp01
+          localId: "01"
+          description: "3x3の将棋ボードが表示される。"
+        - id: SG01-02-sp02
+          localId: "02"
+          description: "プレイヤーは自分の手番になった時、駒を動かすことができる。"
+        - id: SG01-02-sp03
+          localId: "03"
+          description: "現在の手番のプレイヤーがハイライトされる。"
+        - id: SG01-02-sp04
+          localId: "04"
+          description: "駒の移動は将棋のルールに従って有効な手のみを許可する。"
+        - id: SG01-02-sp05
+          localId: "05"
+          description: "ゲームの進行状況（例: 手数、取られた駒など）が表示される。"
+        - id: SG01-02-sp06
+          localId: "06"
+          description: "ゲームが終了した場合、自動的に結果画面に遷移する。"
+    - id: SG01-03
+      localId: "03"
+      title: ゲーム結果画面
+      reason: 
+      description: "ゲーム結果画面のイメージ"
+      images:
+        - game_result.png
+      specifications:
+        - id: SG01-03-sp01
+          localId: "01"
+          description: "勝者の名前が表示される。"
+        - id: SG01-03-sp02
+          localId: "02"
+          description: "「戻る」ボタンをクリックするとユーザーリスト画面に戻ることができる。"
+        - id: SG01-03-sp03
+          localId: "03"
+          description: "対局の結果がデータベースに記録される。"
+
+glossary:
+  title: "9マス将棋オンライン 用語集"
+  categories:
+    - category: "一般"
+      terms:
+        - term: "駒"
+          description: "xxx"
+        - term: "待合室"
+          description: "xxx"
